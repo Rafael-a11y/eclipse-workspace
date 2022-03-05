@@ -1,0 +1,27 @@
+package cursoJavaDevDojo.Tdatas.test;
+
+import java.util.Calendar;
+import java.util.Date;
+
+public class ManipulacaoDeDatasTest {
+
+	public ManipulacaoDeDatasTest() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public static void main(String[] args) {
+		
+		Date date = new Date();
+		date.setTime(date.getTime() + 3_600_000L);
+		System.out.println(date);
+		
+		Calendar c = Calendar.getInstance();
+		if(Calendar.SUNDAY == c.getFirstDayOfWeek()) {
+			System.out.println("Domingo é o 1º dia da semana.");
+		}
+		else {
+			System.out.println("Domingo não é o primeiro dia da semana, e sim " + c.getFirstDayOfWeek());
+		}
+	}
+
+}

@@ -1,0 +1,50 @@
+package programacaoII.aula.test;
+
+import java.util.InputMismatchException;
+import java.util.NoSuchElementException;
+import java.util.Scanner;
+
+public class DivisaoPorZeroOk {
+
+	// demonstra o lançamento de uma exceção quando ocorre uma divisão por zero
+		public static int quotient(int numerator, int denominator) throws ArithmeticException {
+			return numerator / denominator; // possível divisão por zero
+		}
+
+		public static void main(String[] args) {
+			Scanner scanner = new Scanner(System.in);
+			boolean continueLoop = true; // determina se mais entradas são necessárias
+			do {
+				try { // lê dois números e calcula o quociente
+				
+					System.out.print("Informe um numerador inteiro: ");
+					int numerator = scanner.nextInt();
+					System.out.print("Informe um denominador inteiro: ");
+					int denominator = scanner.nextInt();
+			
+					int result = quotient(numerator, denominator);
+					System.out.printf("%nResultado: %d / %d = %d%n", numerator,
+					denominator, result);
+					continueLoop = false; // entrada bem-sucedida; fim do loop
+				} 
+				catch (ArithmeticException | NoSuchElementException | IllegalStateException  | InputMismatchException excecao)	{
+					System.err.printf("%nException: %s%n", excecao);
+					if(excecao instanceof ArithmeticException) {
+						System.out.printf("Zero não é um denominador adqueado, tente novamente.%n%n");
+					}
+					else if(excecao instanceof NoSuchElementException) {
+					    System.out.printf("Erro porque não tem elemento na leitura. Por favor tente novamente.%n%n");
+					}
+					else if(excecao instanceof IllegalStateException) {
+					    System.out.printf("erro porque tem elemento ilegal na leitura. Por favor, tente novamente.%n%n");
+					}
+					else if(excecao instanceof InputMismatchException) {
+						scanner.nextLine(); // descarta entrada para o usuário tentar de novo
+						System.out.printf("Você deve informar números inteiros. Por favor, tente novamente.%n%n");
+					}
+
+			} while (continueLoop);
+
+		}
+}
+}

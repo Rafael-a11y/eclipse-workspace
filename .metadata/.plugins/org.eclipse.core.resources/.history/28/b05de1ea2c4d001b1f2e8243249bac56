@@ -1,0 +1,9 @@
+package br.com.abc.javacore.Xnio.test;
+
+public class FileVisitorTest {
+
+	public FileVisitorTest() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

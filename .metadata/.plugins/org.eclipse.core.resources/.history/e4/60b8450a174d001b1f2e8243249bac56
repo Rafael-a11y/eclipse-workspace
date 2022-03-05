@@ -1,0 +1,9 @@
+package br.com.abc.javacore.Xnio.test;
+
+public class PosixFileAttibutesTest {
+
+	public PosixFileAttibutesTest() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

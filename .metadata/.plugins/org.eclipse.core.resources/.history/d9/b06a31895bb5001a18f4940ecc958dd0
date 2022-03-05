@@ -1,0 +1,23 @@
+package controle.ExerciciosEstruturaDeControle;
+
+import java.util.Scanner;
+
+public class Teste {public static void main(String[] args) {
+	Scanner entrada = new Scanner(System.in);
+	System.out.print("Entre com um número inteiro: ");
+	int numero = entrada.nextInt();
+	System.out.println("\nEntre com um segundo número inteiro: ");
+	int numero1 = entrada.nextInt();
+	entrada.close();
+	if (numero + numero1 <= 100 && numero + numero1 >= 0) {
+		System.out.print("\nO número é menor que 100");
+	}
+	else if (numero + numero1 == 120 || numero + numero1 == 150 || numero + numero1 == 180 || numero + numero1 ==200) {
+		System.out.printf("\nO número %d é maior que 100 mas cai dentro dos valores aceitos fora do range.", numero + numero1);
+	}
+	else {
+		System.out.println("\nNumero inválido");
+	}
+}
+
+}

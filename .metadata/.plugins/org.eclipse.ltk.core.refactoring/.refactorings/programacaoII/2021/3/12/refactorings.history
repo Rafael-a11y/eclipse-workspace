@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;programacaoII.aula.classes.Card&apos; to &apos;DeckOfCards&apos;&#x0D;&#x0A;- Original project: &apos;programacaoII&apos;&#x0D;&#x0A;- Original element: &apos;programacaoII.aula.classes.Card&apos;&#x0D;&#x0A;- Renamed element: &apos;programacaoII.aula.classes.DeckOfCards&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Rename similarly named elements&#x0D;&#x0A;- Update fully qualified names in &apos;*&apos; files&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Card&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;programacaoII.aula.classes{Card.java[Card" matchStrategy="1" name="DeckOfCards" patterns="*" qualified="true" references="true" similarDeclarations="true" stamp="1615764035374" textual="true" version="1.0"/>
+</session>

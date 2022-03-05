@@ -1,0 +1,12 @@
+package classe;
+
+public class Data {
+	int ano;
+	int mes;
+	int dia;
+	
+	String dataFormatada() {
+		return  String.format("Olá, tudo bem? A data é:  ", dia,mes, ano);
+	}
+
+}

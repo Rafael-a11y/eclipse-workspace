@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;generics.Caixa&apos; to &apos;CaixaObjeto&apos;&#x0D;&#x0A;- Original project: &apos;exercicios&apos;&#x0D;&#x0A;- Original element: &apos;generics.Caixa&apos;&#x0D;&#x0A;- Renamed element: &apos;generics.CaixaObjeto&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Caixa&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;generics{Caixa.java[Caixa" matchStrategy="1" name="CaixaObjeto" qualified="false" references="true" similarDeclarations="false" stamp="1618575259030" textual="false" version="1.0"/>
+</session>

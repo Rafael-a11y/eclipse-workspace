@@ -1,0 +1,26 @@
+package swing.gerenciadores.JTable;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.table.DefaultTableModel;
+
+public class InserirContato extends JFrame{
+
+	private DefaultTableModel modelo = new DefaultTableModel();
+	private JPanel painelFundo;
+	private JButton btSalvar;
+	private JButton btLimpar;
+	private JLabel lbNome;
+	private JLabel lbTelefone;
+	private JLabel lbEmail;
+	private JTextField txNome;
+	private JTextField txTelefone;
+	private JTextField txEmail;
+	
+	public InserirContato(DefaultTableModel md) {
+		
+	}
+}

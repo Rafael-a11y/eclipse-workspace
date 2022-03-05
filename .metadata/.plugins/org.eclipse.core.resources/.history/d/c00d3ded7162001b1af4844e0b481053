@@ -1,0 +1,9 @@
+package br.com.abc.javacore.ZZGcomportamentoporparametro.test;
+
+public class CarroTest {
+
+	public CarroTest() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

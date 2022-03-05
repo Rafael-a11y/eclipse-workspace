@@ -1,0 +1,9 @@
+package br.com.abc.javacore.Xnio.test;
+
+public class DosFileAttributesTest {
+
+	public DosFileAttributesTest() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

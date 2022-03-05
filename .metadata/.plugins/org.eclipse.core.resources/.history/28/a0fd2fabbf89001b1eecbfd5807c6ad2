@@ -1,0 +1,70 @@
+package programacaoII.aula.test;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+class Fruta{
+	private String nome;
+	private int quantidade;
+	Fruta(){}
+	Fruta(String nome, int quantidade)
+	{
+		this.nome = nome;this.quantidade = quantidade;
+	}
+	@Override
+	public String toString() {
+		return "Fruta {nome = " + nome + ", quantidade = " + quantidade + " }";
+	}
+	String getNome() {
+		return nome;
+	}
+	int getQuantidade() {
+		return quantidade;
+	}
+	void setNome(String nome) {
+		this.nome = nome;
+	}
+	void setQuantidade(int quantidade) {
+		this.quantidade = quantidade;
+	}
+	
+}
+public class HortFrut {
+	private static List<Fruta> frutas = new ArrayList<Fruta>();
+	private static void listarFrutas() {
+		frutas.stream().forEach(System.out::println);
+	}
+	private static Fruta criarFruta() {
+		Scanner entrada = new Scanner(System.in);
+		String nome = "";
+		int quantidade = 0;
+		System.out.println("Entre com o nome da fruta: ");
+		nome = entrada.nextLine();
+		System.out.println("Agora entre com o nome a quantidade: ");
+		quantidade = entrada.nextInt();
+//		entrada.close();
+		return new Fruta(nome, quantidade);
+	}
+//	private static void addFruta() {
+//		frutas.add(criarFruta());
+//	}
+	public static void main(String[] args) {
+		Scanner entrada = new Scanner(System.in);
+		int opcao = 0;
+		boolean continueLoop = true;
+		List<Fruta> frutas = new ArrayList<Fruta>();
+		
+		do {
+			System.out.print("\n1 - Para adicionar uma nova fruta junto de sua quantidade\n"
+					+ "2 - Para somente adicionar quantidade de frutas\n3 - Sair\nClique aqui: ");
+			opcao = entrada.nextInt();
+			switch(opcao) {
+			case 1 : frutas.add(criarFruta()); break;
+			case 2 : frutas.stream().forEach(System.out::println);break;
+			default : System.out.println("Saindo");
+			}
+		}while(opcao != 3);
+	}
+	
+}

@@ -1,0 +1,17 @@
+package cursoJavaDevDojo.Tdatas.test;
+
+import java.util.Date;
+
+public class ManipulacaoDeDatasTest {
+
+	public ManipulacaoDeDatasTest() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public static void main(String[] args) {
+		
+		Date date = new Date();
+		System.out.println(date);
+	}
+
+}

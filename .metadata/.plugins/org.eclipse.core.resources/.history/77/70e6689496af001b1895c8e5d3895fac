@@ -1,0 +1,54 @@
+package swing;
+
+import java.awt.GridLayout;
+
+import javax.swing.GroupLayout;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+
+public class IntroJTable extends JFrame{
+	
+	private static final long serialVersionUID = 1L;
+	JPanel painelFundo;
+	JTable tabela;
+	JScrollPane barraRolagem;
+	
+	Object[][] dados = {
+			{"Ana Monteiro", "48 9923-7898", "ana.monteiro@gmail.com"},
+			{"João da Silva", "48 8890-3345", "joaosilva@hotmail.com"},
+			{"Pedro Cascaes", "48 9870-5634", "pedrinho@gmail.com"},
+			{"Ana Monteiro", "48 9923-7898", "ana.monteiro@gmail.com"},
+			{"João da Silva", "48 8890-3345", "joaosilva@hotmail.com"},
+			{"Pedro Cascaes", "48 9870-5634", "pedrinho@gmail.com"}
+			};
+	
+	String[] colunas = {"nome", "telefone", "email"};
+	
+	public IntroJTable() {
+		super("contatos");
+	}
+	
+	public void criarJanela() {
+		painelFundo = new JPanel();
+		//Lembrar de voltar aqui e usar GrouypLayout no lugar
+		painelFundo.setLayout(new GridLayout(1, 1));
+		tabela = new JTable(dados, colunas);
+		barraRolagem = new JScrollPane(tabela);
+//		painelFundo.add(barraRolagem);
+		
+		this.getContentPane().add(barraRolagem);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setSize(500, 120);
+		this.setVisible(true);
+		
+	}
+	
+	public static void main(String[] args) {
+		IntroJTable i = new IntroJTable();
+		i.criarJanela();
+	}
+
+}
+

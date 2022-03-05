@@ -1,0 +1,19 @@
+package BlocoNotas;
+
+import java.util.ArrayList;
+
+import java.util.List;
+import javax.swing.JOptionPane;
+
+public class Main {
+
+	public static void main(String[] args) {
+		String entrada = JOptionPane.showInputDialog("Escolha uma das opções listadas abaixo: ");
+		
+		List<Nota> notas = new ArrayList<Nota>();
+		
+		for (int i = 0; i < notas.size(); i++){
+			System.out.println(notas.get(i));
+		}
+	}
+}

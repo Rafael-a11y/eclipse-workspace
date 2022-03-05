@@ -1,0 +1,11 @@
+package lambdas;
+
+public class OperadorBinario {
+	
+	public static void main(String[] args) {
+		
+		/*BinaryOperator recebe 2 operandos de mesmo tipo e retorna um valor do mesmo tipo
+		 * dos 2 operandos*/
+	}
+
+}

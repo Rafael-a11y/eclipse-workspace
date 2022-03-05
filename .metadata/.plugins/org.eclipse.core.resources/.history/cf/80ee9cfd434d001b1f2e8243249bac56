@@ -1,0 +1,13 @@
+package br.com.abc.javacore.Xnio.test;
+
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
+public class PathMatcherTest {
+
+	public static void main(String[] args) {
+		
+		Path path1 = Paths.get("pasta\\subpasta\\subsubpasta");
+	}
+
+}

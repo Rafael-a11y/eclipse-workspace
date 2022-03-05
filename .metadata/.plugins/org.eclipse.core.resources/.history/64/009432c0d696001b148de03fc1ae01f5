@@ -1,0 +1,33 @@
+package BlocoNotas;
+
+import java.util.ArrayList;
+
+import java.util.List;
+import javax.swing.JOptionPane;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		
+		List<Nota> notas = new ArrayList<Nota>();
+		notas.add(new Nota("Minha primeira anotação :)"));
+		boolean continua = true;
+		
+		while(continua == true) {
+			String entrada = JOptionPane.showInputDialog("Escolha uma das opções listadas abaixo"
+					+ "\n 1- lista as notas\n2 - adiciona uma nova nota: ");
+			switch (entrada) {
+			case "1" : for (int i = 0; i < notas.size(); i++){
+							System.out.println(notas.get(i));
+						}
+			break;
+
+			case "2" : String anotacao = JOptionPane.showInputDialog("Digite a anotação");
+					   notas.add(new Nota(anotacao));
+				break;
+			}
+		}
+		
+	}
+}

@@ -1,0 +1,19 @@
+package BlocoNotas;
+
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.JOptionPane;
+
+import com.sun.java_cup.internal.runtime.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner entrada = new Scanner(System.in);
+		List<Nota> notas = new ArrayList<Nota>();
+		
+		for (int i = 0; i < notas.size(); i++){
+        
+		}
+	}
+}

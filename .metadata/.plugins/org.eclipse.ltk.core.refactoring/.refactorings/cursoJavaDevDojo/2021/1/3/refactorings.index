@@ -1,0 +1,14 @@
+1610310331317	Rename field 'carrosAlugaveis'
+1610314971002	Rename type 'ClasseGenericaTest'
+1610316726795	Rename field 'carrosDisponiveis'
+1610369487416	Rename package 'br.com.abc.javacore.ZZBclassesinternas'
+1610457900672	Delete element
+1610465097778	Rename method 'fecharConexao'
+1610468008361	Rename local variable 'comprador'
+1610645479123	Rename local variable 'stmt'
+1610649218411	Rename local variable 's'
+1610659877657	Rename local variable 'connection'
+1610711960415	Rename local variable 'jdbcRowSet'
+1610712342364	Rename local variable 'jrs'
+1610731012476	Rename type 'CompradorDB'
+1610742574946	Delete element

@@ -1,0 +1,89 @@
+package swing;
+import java.awt.EventQueue;
+
+import javax.swing.GroupLayout;
+/*JFrame extends Frame que extends Window que extends Container que extends Component*/
+import javax.swing.JButton;
+import javax.swing.JComponent;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+
+public class TooltipEx extends JFrame{
+
+	/**
+	 * 	JFrame extends Frame, Frame extends Window, Window extends Container, 
+	 *Container extends Component
+	 */
+	private static final long serialVersionUID = 1L;
+	public TooltipEx() {
+		initUI();
+	}
+	
+	public void initUI() {
+	
+		var btn = new JButton("Botão");
+		btn.setToolTipText("Uma Compnente de Botão :)");
+		//Método que eu defini!
+		this.createLayout(btn);
+		this.setSize(300, 200);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+	
+	public void createLayout(JComponent arg) {
+		//Como o método setToolTipText() é da classe JPanel, usamos o cast para converter para
+		///JLabel, pois este é um tipo mais específico de Container
+		//JPanel extends JComponent que extends Container.
+		//GroupLayout é um gerenciador de layouts  que mprecisa ser instanciado com o componente
+		//de parâmetro e este panel precisa defini-lo como seu gerenciador de painel. O set
+		//AutoCreatContainerGaps(boolean) serve para criar vãos na borda, caso contrário o botão aparce
+		//colado na borda. O método dfe instâcia setHorizontalGroup() ou setVerticalGroup servem para
+		//criar uma sequência de comoponentes e também para fornecer as coordenadas, até o dado
+		//momento, não achei uma forma de por um botão em baixo do outro, estes dois métodos esperam
+		//um Group de entrada, por isso usamos createSequentialGroup, que é um tipo específico de 
+		//Group e o usamos de entrada, o addComponent() serve para adicionar um coimponente a este 
+		//grupo de componentes e retorna este mesmo Group com o componente já adicionado, o
+		//addGap(int size) servepara criar vão tanto na horizontal quanto na vertical do component.
+		JButton botao2 = new JButton("Segundo botão");
+		botao2.addActionListener((event)-> {JOptionPane.showMessageDialog(null, "Você apertou o segundo botão");});
+		//Define otexto de dica do botão
+		botao2.setToolTipText("Também não faz nada lek");
+		//Os botões são colocados em um painél, e são organizados dentro deste apinél por 
+		//componentes invisíveis chamados de gerenciadores de layout, criamos um gerenciador
+		//de layout que recebe de parâmetro este painél, ou seja, este gerenciador irá 
+		//organizar os componentes deste painél
+		var pane = (JPanel) this.getContentPane();
+		var pane2 = (JPanel) this.getContentPane();
+		var gl = new GroupLayout(pane);
+		//Precisamos definir o gerenciador de layouts do painél com setLayout( LayoutManager mg)
+		//para que o gerenciador de layout possa manipular e organizar o botão dentro de um painél,
+		//caso congtrário, o botão se amplia e ocupa a tela inteira.
+		pane.setLayout(gl);		
+//		pane.setToolTipText("huehuehue br");
+		
+		
+		gl.setAutoCreateContainerGaps(true);
+//		var btn = new JButton("Clique aqui");
+//		btn.setToolTipText("Ele não faz nada");
+//		pane.add(btn);
+		//SequentialGroup extends Group, createSequentialGroup(), addComponent(), addGap() retorna
+		///Este mesmo SequentialGroup mas com o componente adicionado	
+		gl.setHorizontalGroup(gl.createSequentialGroup().addComponent(botao2).addGap(50).addComponent(arg));
+		
+		gl.setVerticalGroup(gl.createSequentialGroup().addComponent(botao2).addComponent(arg));
+		
+		this.pack();
+		
+		
+	}
+	public static void main(String[] args) {
+		//Cria uma fila de eventos, põe o aap na fila de eventoss para garantir que este seja executado,
+		//serve para que todos os eventos sejam executados em simultaneadade, provavelmente
+		//serve paa não ocorrer problemas com fluxos de execução alternativos. Repare que ao
+		//invés de ei iniciar o GUI com um new, envolvi ela com o método invokeLater()
+		EventQueue.invokeLater(() -> {
+			var ex = new TooltipEx();
+			ex.setVisible(true);
+		});
+	}
+}

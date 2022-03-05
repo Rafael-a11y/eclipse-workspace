@@ -1,0 +1,9 @@
+package br.com.abc.javacore.ZZKstreams.test;
+
+public class StreamTest6Collectors1 {
+
+	public StreamTest6Collectors1() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,25 @@
+package br.com.abc.javacore.ZZKstreams.test;
+
+import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Collectors;
+
+import br.com.abc.javacore.ZZKstreams.classes.Pessoa;
+
+public class StreamTest6Collectors1 {
+
+	public static void main(String[] args) {
+//		Redução e sumarização de Streams em um valor único.
+		List<Pessoa> pessoas = Pessoa.bancoDePessoas();
+		System.out.println(pessoas.stream().count());
+//		Não aceita reference method, poois a função collect não espera uma lambda, reference method e lambdas devem ter como
+//		destino uma interface funcional, exemplo: Supplier, Consumer...
+//		Contando o número de elementos presentes na lista.
+		System.out.println(pessoas.stream().collect(Collectors.counting()));
+//		Capturando o valor máximo. Tome cuidado, a IDE Eclipse não sugere os métodos ao tentar escrever lambda
+		System.out.println(pessoas.stream().max(Comparator.comparing(Pessoa::getSalario)).get());
+			
+				
+	}
+
+}

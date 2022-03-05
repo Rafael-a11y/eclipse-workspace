@@ -1,0 +1,28 @@
+package controle.ExerciciosEstruturaDeControle;
+
+import java.util.Scanner;
+
+public class JogoAdivinhacao {public static void main(String[] args) {
+	
+	Scanner entrada = new Scanner(System.in);
+	System.out.print("Tente adivinhaar um número de 0 a 100: ");
+	int numero = entrada.nextInt();
+	int numeroOculto = 70;
+	if (numero >= 0 && numero <= 100) {
+		for(int contador = 10; numero != numeroOculto ;contador-- ) {
+		if (numero > numeroOculto) {
+			System.out.printf("%d É maior que o número a ser adivinhado", numero);
+		}
+		else if (numero < numeroOculto) {
+			System.out.printf("%d é menor que o número a ser adivinhado", numero);
+		}
+		}
+	}
+	else {
+		System.out.println("Número inválido.");
+	}
+	entrada.close();
+	
+}
+
+}

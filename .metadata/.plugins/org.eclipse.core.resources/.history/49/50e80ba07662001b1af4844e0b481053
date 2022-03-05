@@ -1,0 +1,29 @@
+package br.com.abc.javacore.ZZGcomportamentoporparametro.test;
+//Import estatic serve para importar somente o metodo estatico
+import static java.util.Arrays.asList;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import br.com.abc.javacore.ZZGcomportamentoporparametro.classes.Carro;
+
+public class CarroTest {
+	
+	private static List<Carro> filtrarCarroVerde(List<Carro> carros){
+		List<Carro> result = new ArrayList<Carro>();
+		for(Carro carro : carros) {
+			if(carro.getCor().equalsIgnoreCase("verde")){
+				System.out.println("Carro verde encontrado");
+				System.out.println("Adicionando carro");
+				result.add(carro);
+			}
+		}
+		return result;
+	}
+	public static void main(String[] args) {
+		List<Carro> carros = asList(new Carro("vermelho", 2011), new Carro("verde", 1995), new Carro("preto", 2017));
+		List<Carro> carrosVerdes = filtrarCarroVerde(carros);
+		System.out.println(filtrarCarroVerde(carros));
+	}
+
+}

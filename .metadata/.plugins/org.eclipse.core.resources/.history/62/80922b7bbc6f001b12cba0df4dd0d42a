@@ -1,0 +1,16 @@
+package br.com.abc.javacore.ZZKstreams.test;
+
+import java.util.List;
+
+import br.com.abc.javacore.ZZKstreams.classes.Pessoa;
+
+public class StreamTest6Collectors1 {
+
+	public static void main(String[] args) {
+//		Redução e sumarização de Streams em um valor único.
+		List<Pessoa> pessoas = Pessoa.bancoDePessoas();
+		System.out.println(pessoas.stream().count());
+				
+	}
+
+}

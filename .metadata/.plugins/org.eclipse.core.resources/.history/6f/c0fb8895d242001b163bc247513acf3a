@@ -1,0 +1,39 @@
+package cursoJavaDevDojo.Tdatas.test;
+
+import java.util.Calendar;
+import java.util.Date;
+
+public class ManipulacaoDeDatasTest {
+
+	public ManipulacaoDeDatasTest() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public static void main(String[] args) {
+		
+		Date date = new Date();
+		date.setTime(date.getTime() + 3_600_000L);
+		System.out.println(date);
+		
+		Calendar c = Calendar.getInstance();
+		if(Calendar.MONDAY == c.getFirstDayOfWeek()) {
+			System.out.println("Domingo é o 1º dia da semana.");
+		}
+		else {
+			System.out.println(Calendar.MONDAY + " não é o primeiro dia da semana.");
+		}
+		System.out.println();
+		System.out.println("Dia do mês: " + c.get(Calendar.DAY_OF_MONTH));
+		System.out.println("Dia da semana: " + c.get(Calendar.DAY_OF_WEEK));
+		System.out.println("Dia do ano: " + c.get(Calendar.DAY_OF_YEAR));
+		
+		System.out.println("\n" + c.getTime());
+		System.out.println();
+		System.out.println(c.getTimeInMillis());
+		System.out.println();
+		Date date2 = new Date(1608475274560L);
+		System.out.println();
+		System.out.println(date2);
+	}
+
+}
